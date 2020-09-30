@@ -7,3 +7,4 @@ Common Develop tool package for Go
   - Stack
   - Array
   - Slice
+  - BinaryTree
