@@ -5,6 +5,6 @@ Common Develop tool package for Go
   - LinkedList
   - String
   - Stack
-  - Array
+  - ArrayList
   - Slice
   - BinaryTree
