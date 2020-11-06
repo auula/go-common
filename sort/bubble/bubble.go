@@ -5,7 +5,9 @@
 
 package bubble
 
-import "errors"
+import (
+	"errors"
+)
 
 //  numeric data type
 type numericType uint8
@@ -60,7 +62,8 @@ func AtFloat64(numbers []float64) {
 	}
 }
 
-func SortInt(symbol rune, numbers []int) (err error) {
+// Ints is bubble int sort func
+func Ints(symbol rune, numbers []int) (err error) {
 	err = nil
 	switch symbol {
 	case '>':

@@ -29,9 +29,10 @@ func TestAtInt(t *testing.T) {
 	}
 }
 
+// go test -v -run=TestSortInt
 func TestSortInt(t *testing.T) {
 	numbers := []int{0, 9, 8, 7, 6, 4, 3, 21, 1}
-	err := SortInt('E', numbers)
+	err := Ints('>', numbers)
 	if err != nil {
 		t.Log(err)
 	}
