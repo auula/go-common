@@ -17,13 +17,13 @@ func TestAtInt(t *testing.T) {
 		name string
 		args args
 	}{
-		{"less", args{numbers: []int{0, 9, 8, 7, 6, 4, 3, 21, 1}, swap: PositiveOrderIntFunc}},
-		{"greater", args{numbers: []int{0, 9, 8, 7, 6, 4, 3, 21, 1}, swap: ReverseOrderIntFunc}},
+		{"less", args{numbers: []int{0, 9, 8, 7, 6, 4, 3, 21, 1}, swap: positiveOrderIntFunc}},
+		{"greater", args{numbers: []int{0, 9, 8, 7, 6, 4, 3, 21, 1}, swap: reverseOrderIntFunc}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Log(tt)
-			AtInt(tt.args.numbers, tt.args.swap)
+			atInt(tt.args.numbers, tt.args.swap)
 			t.Log(tt.args.numbers)
 		})
 	}
