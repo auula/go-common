@@ -62,7 +62,7 @@ func atFloat64(numbers []float64) {
 	}
 }
 
-// Ints is bubble int sort func
+// Ints is int type bubble sort func
 func Ints(symbol rune, numbers []int) (err error) {
 	err = nil
 	switch symbol {
