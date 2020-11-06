@@ -23,7 +23,7 @@ func TestAtInt(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Log(tt)
-			atInt(tt.args.numbers, tt.args.swap)
+			sortInt(tt.args.numbers, tt.args.swap)
 			t.Log(tt.args.numbers)
 		})
 	}
