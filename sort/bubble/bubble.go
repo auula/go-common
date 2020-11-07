@@ -6,7 +6,7 @@
 package bubble
 
 import (
-	"errors"
+	"github.com/higker/go-common/sort"
 )
 
 //  numeric data type
@@ -81,12 +81,12 @@ func sortFloat64(numbers []float64, swap func(r, l *float64)) {
 // Ints is int type bubble sort func
 func Ints(symbol rune, numbers []int) (err error) {
 	switch symbol {
-	case '>':
+	case sort.IsMoreThan:
 		sortInt(numbers, positiveOrderIntFunc)
-	case '<':
+	case sort.IsLessThan:
 		sortInt(numbers, reverseOrderIntFunc)
 	default:
-		err = errors.New("operation symbol error, want > OR < ")
+		err = sort.SymbolError
 	}
 	return
 }
@@ -94,12 +94,12 @@ func Ints(symbol rune, numbers []int) (err error) {
 // Int64s is int64 type bubble sort func
 func Int64s(symbol rune, numbers []int64) (err error) {
 	switch symbol {
-	case '>':
+	case sort.IsMoreThan:
 		sortInt64(numbers, positiveOrderInt64Func)
-	case '<':
+	case sort.IsLessThan:
 		sortInt64(numbers, reverseOrderInt64Func)
 	default:
-		err = errors.New("operation symbol error, want > OR < ")
+		err = sort.SymbolError
 	}
 	return
 }
@@ -107,12 +107,12 @@ func Int64s(symbol rune, numbers []int64) (err error) {
 // Float64s is float64 type bubble sort func
 func Float64s(symbol rune, numbers []float64) (err error) {
 	switch symbol {
-	case '>':
+	case sort.IsMoreThan:
 		sortFloat64(numbers, positiveOrderFloat64Func)
-	case '<':
+	case sort.IsLessThan:
 		sortFloat64(numbers, reverseOrderFloat64Func)
 	default:
-		err = errors.New("operation symbol error, want > OR < ")
+		err = sort.SymbolError
 	}
 	return
 }
