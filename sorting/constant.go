@@ -3,7 +3,7 @@
 // Author: SDing <deen.job@qq.com>
 // Date: 2020/11/7 - 1:42 下午 - UTC/GMT+08:00
 
-package sort
+package sorting
 
 import "errors"
 

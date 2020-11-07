@@ -6,7 +6,7 @@
 package bubble
 
 import (
-	"github.com/higker/go-common/sort"
+	"github.com/higker/go-common/sorting"
 )
 
 //  numeric data type
@@ -51,7 +51,7 @@ var (
 	}
 )
 
-// sortInt int type sort func
+// sortInt int type sorting func
 func sortInt(numbers []int, swap func(r, l *int)) {
 	for i := 0; i < len(numbers); i++ {
 		for j := 0; j < len(numbers)-i-1; j++ {
@@ -60,7 +60,7 @@ func sortInt(numbers []int, swap func(r, l *int)) {
 	}
 }
 
-// sortInt64 int64 type sort func
+// sortInt64 int64 type sorting func
 func sortInt64(numbers []int64, swap func(r, l *int64)) {
 	for i := 0; i < len(numbers); i++ {
 		for j := 0; j < len(numbers)-i-1; j++ {
@@ -69,7 +69,7 @@ func sortInt64(numbers []int64, swap func(r, l *int64)) {
 	}
 }
 
-// sortFloat64 Float64 type sort func
+// sortFloat64 Float64 type sorting func
 func sortFloat64(numbers []float64, swap func(r, l *float64)) {
 	for i := 0; i < len(numbers); i++ {
 		for j := 0; j < len(numbers)-i-1; j++ {
@@ -78,41 +78,41 @@ func sortFloat64(numbers []float64, swap func(r, l *float64)) {
 	}
 }
 
-// Ints is int type bubble sort func
+// Ints is int type bubble sorting func
 func Ints(symbol rune, numbers []int) (err error) {
 	switch symbol {
-	case sort.IsMoreThan:
+	case sorting.IsMoreThan:
 		sortInt(numbers, positiveOrderIntFunc)
-	case sort.IsLessThan:
+	case sorting.IsLessThan:
 		sortInt(numbers, reverseOrderIntFunc)
 	default:
-		err = sort.SymbolError
+		err = sorting.SymbolError
 	}
 	return
 }
 
-// Int64s is int64 type bubble sort func
+// Int64s is int64 type bubble sorting func
 func Int64s(symbol rune, numbers []int64) (err error) {
 	switch symbol {
-	case sort.IsMoreThan:
+	case sorting.IsMoreThan:
 		sortInt64(numbers, positiveOrderInt64Func)
-	case sort.IsLessThan:
+	case sorting.IsLessThan:
 		sortInt64(numbers, reverseOrderInt64Func)
 	default:
-		err = sort.SymbolError
+		err = sorting.SymbolError
 	}
 	return
 }
 
-// Float64s is float64 type bubble sort func
+// Float64s is float64 type bubble sorting func
 func Float64s(symbol rune, numbers []float64) (err error) {
 	switch symbol {
-	case sort.IsMoreThan:
+	case sorting.IsMoreThan:
 		sortFloat64(numbers, positiveOrderFloat64Func)
-	case sort.IsLessThan:
+	case sorting.IsLessThan:
 		sortFloat64(numbers, reverseOrderFloat64Func)
 	default:
-		err = sort.SymbolError
+		err = sorting.SymbolError
 	}
 	return
 }

@@ -6,7 +6,7 @@
 package selection
 
 import (
-	"github.com/higker/go-common/sort"
+	"github.com/higker/go-common/sorting"
 )
 
 var (
@@ -34,12 +34,12 @@ func atInt(numbers []int, swap func(leftNum, rightNum *int)) {
 
 func Ints(symbol rune, numbers []int) (err error) {
 	switch symbol {
-	case sort.IsMoreThan:
+	case sorting.IsMoreThan:
 		atInt(numbers, positiveOrderIntFunc)
-	case sort.IsLessThan:
+	case sorting.IsLessThan:
 		atInt(numbers, reverseOrderIntFunc)
 	default:
-		err = sort.SymbolError
+		err = sorting.SymbolError
 	}
 	return
 }
