@@ -79,6 +79,7 @@ func sortFloat64(numbers []float64, swap func(r, l *float64)) {
 }
 
 // Ints is int type bubble sorting func
+// symbol = '>' or '<'
 func Ints(symbol rune, numbers []int) (err error) {
 	switch symbol {
 	case sorting.IsMoreThan:
@@ -92,6 +93,7 @@ func Ints(symbol rune, numbers []int) (err error) {
 }
 
 // Int64s is int64 type bubble sorting func
+// symbol = '>' or '<'
 func Int64s(symbol rune, numbers []int64) (err error) {
 	switch symbol {
 	case sorting.IsMoreThan:
@@ -104,7 +106,8 @@ func Int64s(symbol rune, numbers []int64) (err error) {
 	return
 }
 
-// Float64s is float64 type bubble sorting func
+// Float64 is float64 type bubble sorting func
+// symbol = '>' or '<'
 func Float64s(symbol rune, numbers []float64) (err error) {
 	switch symbol {
 	case sorting.IsMoreThan:
