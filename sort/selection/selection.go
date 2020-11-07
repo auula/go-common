@@ -12,12 +12,12 @@ import (
 var (
 	positiveOrderIntFunc = func(leftNum, rightNum *int) {
 		if *(leftNum) > *(rightNum) {
-			*(leftNum), *(leftNum) = *(rightNum), *(rightNum)
+			*(leftNum), *(rightNum) = *(rightNum), *(leftNum)
 		}
 	}
 	reverseOrderIntFunc = func(leftNum, rightNum *int) {
 		if *(leftNum) < *(rightNum) {
-			*(leftNum), *(leftNum) = *(rightNum), *(rightNum)
+			*(leftNum), *(rightNum) = *(rightNum), *(leftNum)
 		}
 	}
 )
