@@ -14,6 +14,7 @@ func Sort(numbers []int) {
 		// 用上一个元素比较当前的元素
 		for pervIndex >= 0 && numbers[pervIndex] > current {
 			numbers[pervIndex+1] = numbers[pervIndex]
+			// 向左移动方便下次比较
 			pervIndex -= 1
 		}
 		// 如果pervIndex没有变化说明就不需要操作
